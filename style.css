@@ -100,6 +100,7 @@ body {
   text-align: center;
   padding: 15px;
   width: 320px;
+  height: 500px;
   margin: auto;
   border-radius: 20px;
   background-color: var(--clr-white);
@@ -117,9 +118,10 @@ h1 {
   font-size: var(--fs-200);
   font-weight: var(--fw-bold);
   line-height: 1;
+  padding-top: 10px;
 }
 
 p {
   color: var(--clr-grayish-blue);
-  padding: 0 15px;
+  padding: 10px 15px;
 }
