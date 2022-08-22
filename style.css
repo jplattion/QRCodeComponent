@@ -1,6 +1,6 @@
 /* Variables */
 
-.root {
+:root {
   --clr-white: hsl(0, 0%, 100%);
   --clr-light-grey: hsl(212, 45%, 89%);
   --clr-grayish-blue: hsl(220, 15%, 55%);
@@ -11,10 +11,11 @@
 
   --ff-primary: "Outfit", sans-serif;
 
-  --ff-body: var(--ff-primary);
-
   --fw-regular: 400;
   --fw-bold: 700;
+
+  --fs-100: 15px;
+  --fs-200: 1.25rem;
 }
 
 /* reset */
@@ -28,17 +29,10 @@
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+* {
   margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -52,9 +46,12 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  height: 100%;
+}
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -71,14 +68,6 @@ picture {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -93,4 +82,44 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* General Styling */
+body {
+  font-size: var(--fs-100);
+  font-family: var(--ff-primary);
+  color: var(--clr-dark-blue);
+  background-color: var(--clr-light-grey);
+  font-weight: var(--fw-regular);
+  margin-top: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  width: 320px;
+  margin: auto;
+  border-radius: 20px;
+  background-color: var(--clr-white);
+}
+
+img {
+  border-radius: 10px;
+  height: 280px;
+  width: 280px;
+  align-self: center;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: var(--fs-200);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+
+p {
+  color: var(--clr-grayish-blue);
+  padding: 0 15px;
 }
